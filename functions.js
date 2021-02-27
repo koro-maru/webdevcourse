@@ -4,13 +4,13 @@ const addition = (num1, num2) =>{
     return num1 + num2;
 }
 
-console.log(addition(num1, num2));
+console.log(addition(1, 2));
 
 function subtraction(num1, num2){
     return num2 - num1;
 }
 
-console.log(subtraction(30,31));
+console.log(subtraction(30,31))
 
 class Dog{
     constructor(breed, name, age, temperament){
