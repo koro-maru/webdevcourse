@@ -1,0 +1,22 @@
+{
+  "name": "webdevcourse-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "audio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koro-maru/webdevcourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koro-maru/webdevcourse/issues"
+  },
+  "homepage": "https://github.com/koro-maru/webdevcourse#readme",
+  "dependencies": {
+    "node-audiorecorder": "^2.2.0"
+  }
+}

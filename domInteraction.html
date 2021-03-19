@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Example jQuery Methods</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<style>
+	body {
+		background-color: black
+	}
+
+	.hidden {
+		width: 30rem;
+		height: 30rem;
+	}
+
+	.hidden_div {
+		display: flex;
+		justify-content: space-evenly;
+	}
+</style>
+
+<body class="changing_color">
+	<div class="hidden_div">
+		<img class="hidden"
+			src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Corvus_corone_-near_Canford_Cliffs%2C_Poole%2C_England-8.jpg" />
+	</div>
+	<script>
+		(function ($) {
+			const dual_img = $(".hidden");
+			dual_img.on({
+				"mouseover": function () {
+					this.src = 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Candle.jpg';
+				},
+				"mouseout": function () {
+					this.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Corvus_corone_-near_Canford_Cliffs%2C_Poole%2C_England-8.jpg';
+				}
+			});
+
+			function colorChange() {
+				const color = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)});`;
+				console.log(color)
+				$(document.body).animate({
+					backgroundColor: color
+				}, 1000);
+				window.setTimeout('colorChange()', 1000);
+			}
+
+			$(document).ready(function () {
+				colorChange();
+			});
+		})(jQuery);
+	</script>
+</body>
+
+</html>
